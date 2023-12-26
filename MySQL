@@ -1,0 +1,6 @@
+# Dockerfile for MySQL database
+FROM mysql:latest
+ENV MYSQL_ROOT_PASSWORD example_password
+ENV MYSQL_DATABASE my_database
+ENV MYSQL_USER app_user
+ENV MYSQL_PASSWORD app_password

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - my_network
+  db:
+    build: ./MySQL
+    networks:
+      - my_network
+
+networks:
+  my_network:
